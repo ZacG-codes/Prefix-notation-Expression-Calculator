@@ -17,3 +17,15 @@ First up is the loop and mode. The mode is just pasted from the professor. The l
 # 10/23/2026 10:57pm
 
 Loop skeleton done.
+
+# 10/23/2026 11:00pm
+
+Time for number parsing. I will need to skip whitespace, input digits, parse numbers, and evaluate.
+
+# 10/23/2026 11:25pm
+
+I am stressing. Things seem to work so far but I need to finish before the deadline.
+
+# 10/23/2026 11:31pm
+
+I finished adding everything for number parsing but now need to add the operators and history still. Seems straightforward but I need to work quickly.
