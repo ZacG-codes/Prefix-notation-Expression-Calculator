@@ -29,3 +29,7 @@ I am stressing. Things seem to work so far but I need to finish before the deadl
 # 10/23/2026 11:31pm
 
 I finished adding everything for number parsing but now need to add the operators and history still. Seems straightforward but I need to work quickly.
+
+# 10/23/2026 11:37pm
+
+Operations added.
