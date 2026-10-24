@@ -5,3 +5,7 @@ This is the first log. I am starting this project 3 days out from its due date, 
 # 10/20/2026 7:05pm
 
 I committed the devlog, synced the GitHub repo with the git repo for a particular directory on my machine, created a calc.rkt file which I intend to use for the whole program, added the mode-detection code to said file (commented out for now), and also added the sample-runs directory to the repo.
+
+# 10/23/2026 10:47pm
+
+It is grind time. My schedule restraints and procrastination problem has led me into a sticky situation. I will try my best to finish this project tonight. My current plan is as follows: code the loop, quit, mode, and EOF handling. Then add number parsing and addition and multiplication. Then division, unary '-', and text checks. Then history. Finally error handling. I will then test with some sample runs, update the README, and hopefully have everything submitted in time.
