@@ -33,6 +33,14 @@
         (list n (cadr r))
         (error "bad number"))))
 
+; $n, returns (list value rest), history is newest first
+(define (parse-history chars history)
+  (let* ([r (take-digits chars)]
+         [n (string->number (list->string (car r)))])
+    (if (and n (exact-integer? n) (>= n 1) (<= n (length history)))
+        (list (list-ref (reverse history) (- n 1)) (cadr r))
+        (error "bad history id"))))
+
 (define (divide a b)
   (if (= b 0)
       (error "divide by zero")
@@ -54,6 +62,7 @@
       [(char=? (car chars) #\-)
        (let ([r (parse-expr (cdr chars) history)])
          (list (- (car r)) (cadr r)))]
+      [(char=? (car chars) #\$) (parse-history (cdr chars) history)]
       [(char-numeric? (car chars)) (parse-number chars)]
       [else (error "bad character")])))
 

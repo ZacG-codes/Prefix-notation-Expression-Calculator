@@ -33,3 +33,14 @@ I finished adding everything for number parsing but now need to add the operator
 # 10/23/2026 11:37pm
 
 Operations added.
+
+# 10/23/2026 11:38pm
+
+Last thing to add is history. I have the bulk of the program complete now and this is basically the last step of programming before testing. So I am feeling good. For history, all I believe I need to add is a parse-history function and then update the parse-expr funciton.
+
+# 10/23/2026 11:47pm
+
+I have completed the program and now just need to run the tests and pray.
+
+# 10/23/2026 11:53
+We made it. I didn't run all tests but ran at least 1 in interactive mode and batch mode each. Now just time to write the README real quick and let it rip!
