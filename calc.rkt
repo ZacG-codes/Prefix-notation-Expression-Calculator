@@ -33,10 +33,27 @@
         (list n (cadr r))
         (error "bad number"))))
 
+(define (divide a b)
+  (if (= b 0)
+      (error "divide by zero")
+      (quotient a b)))
+
+; parse two expressions and combine them with op
+(define (binary op chars history)
+  (let* ([a (parse-expr chars history)]
+         [b (parse-expr (cadr a) history)])
+    (list (op (car a) (car b)) (cadr b))))
+
 (define (parse-expr chars0 history)
   (let ([chars (skip-ws chars0)])
     (cond
       [(null? chars) (error "empty")]
+      [(char=? (car chars) #\+) (binary + (cdr chars) history)]
+      [(char=? (car chars) #\*) (binary * (cdr chars) history)]
+      [(char=? (car chars) #\/) (binary divide (cdr chars) history)]
+      [(char=? (car chars) #\-)
+       (let ([r (parse-expr (cdr chars) history)])
+         (list (- (car r)) (cadr r)))]
       [(char-numeric? (car chars)) (parse-number chars)]
       [else (error "bad character")])))
 
